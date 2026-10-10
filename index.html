@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Practice Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Interview Practice Tracker</h1>
+        <p>Track your progress. Prepare with confidence.</p>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Questions</h3>
+                <p id="totalQuestions">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completedQuestions">0</p>
+            </div>
+
+            <div class="card">
+                <h3>In Progress</h3>
+                <p id="inProgressQuestions">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Progress</h3>
+                <p id="progressPercent">0%</p>
+            </div>
+        </section>
+
+        <section class="tracker">
+            <h2>Add a Question</h2>
+
+            <form id="questionForm">
+                <input
+                    type="text"
+                    id="questionTitle"
+                    placeholder="Enter question title"
+                    required
+                >
+
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="DSA">DSA</option>
+                    <option value="Git">Git</option>
+                    <option value="Technical">Technical</option>
+                </select>
+
+                <select id="difficulty" required>
+                    <option value="">Select difficulty</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+
+                <select id="status">
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+                <button type="submit">Add Question</button>
+            </form>
+        </section>
+
+       
+<section class="question-section">
+    <h2>Your Questions</h2>
+
+    <div class="filters">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search questions..."
+        >
+
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="DSA">DSA</option>
+            <option value="Git">Git</option>
+            <option value="Technical">Technical</option>
+        </select>
+
+        <select id="statusFilter">
+            <option value="">All Statuses</option>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+        </select>
+
+        <select id="difficultyFilter">
+            <option value="">All Difficulties</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+
+        <button type="button" id="clearFilters">
+            Clear Filters
+        </button>
+    </div>
+
+    <div id="questionList"></div>
+</section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
